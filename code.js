@@ -21,9 +21,9 @@ function seperate(array, beg, end) {
     for (let j = beg; j < end; j++) {
         if (array[j] <= pivotNum) {
             i++;
-            (array[i], array[j]) = (array[j], array[i]);
+            [array[i], array[j]] = [array[j], array[i]];
         }
     }
-    (array[i+1], array[end]) = (array[end], array[i+1]);
+    [array[i+1], array[end]] = [array[end], array[i+1]];
     return i+1;
 }
